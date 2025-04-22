@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 1rem;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .hero {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+        
+        .feature-card p {
+            color: #666;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #6e8efb;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mon Site Web</h1>
+        <p>Une démo moderne et responsive</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="accueil" class="hero">
+            <h2>Bienvenue sur notre site</h2>
+            <p>Nous créons des expériences web exceptionnelles avec les dernières technologies.</p>
+            <a href="#contact" class="btn">Contactez-nous</a>
+        </section>
+        
+        <section id="services" class="features">
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3>Design Web</h3>
+                <p>Nous concevons des sites web modernes, élégants et adaptés à tous les appareils.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>Développement</h3>
+                <p>Notre équipe utilise les dernières technologies pour créer des sites performants.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile First</h3>
+                <p>Tous nos projets sont conçus avec une approche mobile-first pour une expérience optimale.</p>
+            </div>
+        </section>
+        
+        <section id="portfolio" class="hero">
+            <h2>Notre Portfolio</h2>
+            <p>Découvrez nos derniers projets et réalisations</p>
+            <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <img src="/api/placeholder/350/200" alt="Projet 1" style="width: 100%; border-radius: 8px;">
+                <img src="/api/placeholder/350/200" alt="Projet 2" style="width: 100%; border-radius: 8px;">
+                <img src="/api/placeholder/350/200" alt="Projet 3" style="width: 100%; border-radius: 8px;">
+            </div>
+        </section>
+        
+        <section id="apropos" class="hero">
+            <h2>À propos de nous</h2>
+            <p>Nous sommes une équipe passionnée par le développement web et le design, avec plus de 10 ans d'expérience dans le domaine. Notre objectif est de créer des sites web qui se démarquent et qui apportent une réelle valeur ajoutée à nos clients.</p>
+        </section>
+        
+        <section id="contact" class="hero">
+            <h2>Contactez-nous</h2>
+            <p>Vous avez un projet en tête ? N'hésitez pas à nous contacter !</p>
+            <form style="text-align: left; max-width: 500px; margin: 0 auto;">
+                <div style="margin-bottom: 15px;">
+                    <label for="name" style="display: block; margin-bottom: 5px;">Nom</label>
+                    <input type="text" id="name" name="name" style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ddd;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="email" style="display: block; margin-bottom: 5px;">Email</label>
+                    <input type="email" id="email" name="email" style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ddd;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="message" style="display: block; margin-bottom: 5px;">Message</label>
+                    <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ddd;"></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© 2025 Mon Site Web. Tous droits réservés.</p>
+        <div class="social-icons">
+            <a href="#" class="social-icon">FB</a>
+            <a href="#" class="social-icon">TW</a>
+            <a href="#" class="social-icon">IG</a>
+            <a href="#" class="social-icon">LI</a>
+        </div>
+    </footer>
+</body>
+</html>
